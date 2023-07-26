@@ -1,2 +1,3 @@
 # IFRN-exemplos
-Arquirvos diversos com exemplos visto em sala.
+
+Arquivos diversos com exemplos visto em sala.
