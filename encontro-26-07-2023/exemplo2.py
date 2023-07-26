@@ -1,4 +1,4 @@
-# HERANÇA MULTIPLA
+# HERANÇA MÚLTIPLA
 
 class Mae:
     def cor_olho(self):
@@ -11,6 +11,7 @@ class Pai:
 
 
 class Filho(Pai, Mae):
+    # SOBRESCRITA DE MÉTODO HERDADO
     def cor_olho(self):
         print('Olhos verdes castanhos do filho')
 
