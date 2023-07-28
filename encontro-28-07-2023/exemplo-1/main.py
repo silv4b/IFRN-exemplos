@@ -1,5 +1,5 @@
-from classes import Emprego, Pessoa
-from classes import ItemPedido, Pedido
+from classes.classes import Emprego, Pessoa # para exemplo de agregação
+from classes.classes import ItemPedido, Pedido # para exemplo de composição
 
 if __name__ == '__main__':
     print('Agregação'.upper())

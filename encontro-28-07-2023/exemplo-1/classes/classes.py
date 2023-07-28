@@ -1,4 +1,6 @@
-# AGREGAÇÃO: Relacionamento onde o objeto “agregado” a outro faz sentido sozinho (mesmo sem ser parte do objeto que o contém).
+# AGREGAÇÃO: Agregação é um tipo de associação entre classes em que uma classe contém objetos de outra classe como seus atributos, mas esses objetos podem existir **independentemente** da classe que os contém. Ou seja, a classe agregadora possui uma referência aos objetos agregados, mas não é responsável por criá-los ou gerenciá-los. Quando a classe agregadora é destruída, os objetos agregados não são necessariamente destruídos.
+
+# A classe Pessoa usa a classe Emprego de forma 'agregada', a classe emprego pode existir e ser usada de forma externa normalmente, fora do escopo de Pessoa, por isso chamamos de classe agregada.
 
 # Classe Emprego que vai ser agregada a Pessoa
 class Emprego:
@@ -27,11 +29,9 @@ class Pessoa:
     def get_emprego(self):
         return self.emprego
 
-# A classe Pessoa usa a classe Emprego de forma 'agregada', semanticamente, a classe emprego pode existir e ser usada normalmente fora do escopo de Pessoa, por isso chamamos de classe agregada.
+# COMPOSIÇÃO: A composição é um tipo de associação entre classes em que uma classe contém objetos de outra classe como seus atributos, esses objetos são partes **fundamentais** da classe agregadora. Em outras palavras, a classe compositora é responsável por criar e gerenciar os objetos agregados a ela, e eles não existem independentemente dela.
 
-# ======================================================
-
-# COMPOSIÇÃO: Relacionamento “mais restritivo” que a agregação onde o objeto que compõe outro não faz sentido sozinho (sem fazer parte do objeto que o contém)
+# A classe Pedido usa a classe ItemPedido de forma composta, ou seja, o ItemPedido, só vai existir quando um Pedido existir, de forma que não faz sentido um ItemPedido existir sem um Pedido, por isso composição, porque ItemPedido compõe Pedido.
 
 
 class ItemPedido:
@@ -54,5 +54,3 @@ class Pedido:
         for i in range(0, len(self.item_pedido)):
             print(
                 f'Nome: {self.item_pedido[i].nome}\nValor: R$ {self.item_pedido[i].valor:,.2f}')
-
-# A classe Pedido usa a classe ItemPedido de forma composta, ou seja, o ItemPedido, só vai existir quando um Pedido existir, de forma que não faz sentido um ItemPedido existir sem um pedido, por isso composição, porque ItemPedido compõe Pedido
